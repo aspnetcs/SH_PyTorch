@@ -1,4 +1,6 @@
 # Spectral Hashing
+http://papers.nips.cc/paper/3383-spectral-hashing.pdf
+http://papers.nips.cc/paper/3383-spectral-hashing
 
 ## REQUIREMENTS
 `pip install -r requirements.txt`
