@@ -37,6 +37,9 @@ optional arguments:
   --gpu GPU             Using gpu.(default: False)
   --seed SEED           Random seed.(default: 3367)
 ```
+## Example
+
+python run.py --dataset imagenet-tc100 --root .\data\imagenet-tc100_alexnet.t
 
 ## EXPERIMENTS
 cifar10-gist dataset. Gist features, 1000 query images, 5000 training images, MAP@ALL.
