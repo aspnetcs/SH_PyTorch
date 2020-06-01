@@ -48,6 +48,8 @@ python run.py --dataset imagenet-tc100 --root .\data\imagenet-tc100_alexnet.t
 
 python run.py --dataset nus-wide-tc21 --root .\data\nus-wide-tc21_alexnet.t
 
+
+
 2020-06-01 14:31:07.025 | INFO     | __main__:run:39 - [code_length:8][map:0.4062]
 
 2020-06-01 14:33:20.802 | INFO     | __main__:run:39 - [code_length:16][map:0.4112]
