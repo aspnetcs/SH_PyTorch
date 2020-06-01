@@ -38,6 +38,8 @@ optional arguments:
   --seed SEED           Random seed.(default: 3367)
 ```
 ## Example
+Put these data sets (cifar10-gist.mat,cifar-10_alexnet.t,nus-wide-tc21_alexnet.t,imagenet-tc100_alexnet.t) in the data directory,and then run the following command.
+
 python run.py --dataset cifar-10 --root .\data\cifar-10_alexnet.t
 
 python run.py --dataset cifar10-gist --root .\data\cifar_10_gist.mat
