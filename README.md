@@ -48,6 +48,14 @@ python run.py --dataset imagenet-tc100 --root .\data\imagenet-tc100_alexnet.t
 
 python run.py --dataset nus-wide-tc21 --root .\data\nus-wide-tc21_alexnet.t
 
+2020-06-01 14:31:07.025 | INFO     | __main__:run:39 - [code_length:8][map:0.4062]
+2020-06-01 14:33:20.802 | INFO     | __main__:run:39 - [code_length:16][map:0.4112]
+2020-06-01 14:36:15.478 | INFO     | __main__:run:39 - [code_length:24][map:0.4185]
+2020-06-01 14:39:47.755 | INFO     | __main__:run:39 - [code_length:32][map:0.4448]
+2020-06-01 14:44:36.249 | INFO     | __main__:run:39 - [code_length:48][map:0.4332]
+2020-06-01 14:50:49.982 | INFO     | __main__:run:39 - [code_length:64][map:0.4315]
+2020-06-01 15:01:05.612 | INFO     | __main__:run:39 - [code_length:96][map:0.4253]
+2020-06-01 15:14:49.145 | INFO     | __main__:run:39 - [code_length:128][map:0.4236]
 
 ## EXPERIMENTS
 cifar10-gist dataset. Gist features, 1000 query images, 5000 training images, MAP@ALL.
