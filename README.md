@@ -42,6 +42,22 @@ Put these data sets (cifar10-gist.mat,cifar-10_alexnet.t,nus-wide-tc21_alexnet.t
 
 python run.py --dataset cifar-10 --root .\data\cifar-10_alexnet.t
 
+2020-06-02 03:04:53.522 | INFO     | __main__:run:39 - [code_length:8][map:0.1819]
+
+2020-06-02 03:05:10.976 | INFO     | __main__:run:39 - [code_length:16][map:0.1866]
+
+2020-06-02 03:05:33.668 | INFO     | __main__:run:39 - [code_length:24][map:0.1920]
+
+2020-06-02 03:06:02.806 | INFO     | __main__:run:39 - [code_length:32][map:0.1901]
+
+2020-06-02 03:06:47.982 | INFO     | __main__:run:39 - [code_length:48][map:0.2050]
+
+2020-06-02 03:07:56.644 | INFO     | __main__:run:39 - [code_length:64][map:0.2017]
+
+2020-06-02 03:09:48.745 | INFO     | __main__:run:39 - [code_length:96][map:0.1984]
+
+2020-06-02 03:12:42.339 | INFO     | __main__:run:39 - [code_length:128][map:0.1965]
+
 python run.py --dataset cifar10-gist --root .\data\cifar_10_gist.mat
 
 python run.py --dataset imagenet-tc100 --root .\data\imagenet-tc100_alexnet.t
