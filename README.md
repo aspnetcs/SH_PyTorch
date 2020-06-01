@@ -39,9 +39,13 @@ optional arguments:
 ```
 ## Example
 python run.py --dataset cifar-10 --root .\data\cifar-10_alexnet.t
+
 python run.py --dataset cifar10-gist --root .\data\cifar_10_gist.mat
+
 python run.py --dataset imagenet-tc100 --root .\data\imagenet-tc100_alexnet.t
+
 python run.py --dataset nus-wide-tc21 --root .\data\nus-wide-tc21_alexnet.t
+
 
 ## EXPERIMENTS
 cifar10-gist dataset. Gist features, 1000 query images, 5000 training images, MAP@ALL.
