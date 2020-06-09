@@ -58,7 +58,7 @@ Put these data sets (cifar10-gist.mat,cifar-10_alexnet.t,nus-wide-tc21_alexnet.t
 
 2020-06-02 03:12:42.339 | INFO     | __main__:run:39 - [code_length:128][map:0.1965]
 
-python run.py --dataset cifar10-gist --root .\data\cifar_10_gist.mat
+**python run.py --dataset cifar10-gist --root .\data\cifar_10_gist.mat**
 
 2020-06-10 07:31:05.195 | INFO     | __main__:run:39 - [code_length:8][map:0.1247]
 
@@ -78,7 +78,7 @@ python run.py --dataset cifar10-gist --root .\data\cifar_10_gist.mat
 
 
 
-python run.py --dataset imagenet-tc100 --root .\data\imagenet-tc100_alexnet.t
+**python run.py --dataset imagenet-tc100 --root .\data\imagenet-tc100_alexnet.t**
 
 
 2020-06-09 23:35:15.200 | INFO     | __main__:run:39 - [code_length:8][map:0.0523]
@@ -98,7 +98,7 @@ python run.py --dataset imagenet-tc100 --root .\data\imagenet-tc100_alexnet.t
 2020-06-10 00:43:28.329 | INFO     | __main__:run:39 - [code_length:128][map:0.1844]
 
 
-python run.py --dataset nus-wide-tc21 --root .\data\nus-wide-tc21_alexnet.t
+**python run.py --dataset nus-wide-tc21 --root .\data\nus-wide-tc21_alexnet.t**
 
 
 
