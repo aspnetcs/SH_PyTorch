@@ -60,17 +60,43 @@ python run.py --dataset cifar-10 --root .\data\cifar-10_alexnet.t
 
 python run.py --dataset cifar10-gist --root .\data\cifar_10_gist.mat
 
+2020-06-10 07:31:05.195 | INFO     | __main__:run:39 - [code_length:8][map:0.1247]
+
+2020-06-10 07:31:07.091 | INFO     | __main__:run:39 - [code_length:16][map:0.1302]
+
+2020-06-10 07:31:09.432 | INFO     | __main__:run:39 - [code_length:24][map:0.1291]
+
+2020-06-10 07:31:12.158 | INFO     | __main__:run:39 - [code_length:32][map:0.1283]
+
+2020-06-10 07:31:16.171 | INFO     | __main__:run:39 - [code_length:48][map:0.1310]
+
+2020-06-10 07:31:22.579 | INFO     | __main__:run:39 - [code_length:64][map:0.1286]
+
+2020-06-10 07:31:33.724 | INFO     | __main__:run:39 - [code_length:96][map:0.1288]
+
+2020-06-10 07:31:51.210 | INFO     | __main__:run:39 - [code_length:128][map:0.1274]
+
+
+
 python run.py --dataset imagenet-tc100 --root .\data\imagenet-tc100_alexnet.t
 
 
 2020-06-09 23:35:15.200 | INFO     | __main__:run:39 - [code_length:8][map:0.0523]
+
 2020-06-09 23:39:26.470 | INFO     | __main__:run:39 - [code_length:16][map:0.0888]
+
 2020-06-09 23:44:32.683 | INFO     | __main__:run:39 - [code_length:24][map:0.1095]
+
 2020-06-09 23:50:49.251 | INFO     | __main__:run:39 - [code_length:32][map:0.1315]
+
 2020-06-09 23:59:08.057 | INFO     | __main__:run:39 - [code_length:48][map:0.1545]
+
 2020-06-10 00:09:40.343 | INFO     | __main__:run:39 - [code_length:64][map:0.1654]
+
 2020-06-10 00:24:35.635 | INFO     | __main__:run:39 - [code_length:96][map:0.1805]
+
 2020-06-10 00:43:28.329 | INFO     | __main__:run:39 - [code_length:128][map:0.1844]
+
 
 python run.py --dataset nus-wide-tc21 --root .\data\nus-wide-tc21_alexnet.t
 
