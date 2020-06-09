@@ -62,6 +62,16 @@ python run.py --dataset cifar10-gist --root .\data\cifar_10_gist.mat
 
 python run.py --dataset imagenet-tc100 --root .\data\imagenet-tc100_alexnet.t
 
+
+2020-06-09 23:35:15.200 | INFO     | __main__:run:39 - [code_length:8][map:0.0523]
+2020-06-09 23:39:26.470 | INFO     | __main__:run:39 - [code_length:16][map:0.0888]
+2020-06-09 23:44:32.683 | INFO     | __main__:run:39 - [code_length:24][map:0.1095]
+2020-06-09 23:50:49.251 | INFO     | __main__:run:39 - [code_length:32][map:0.1315]
+2020-06-09 23:59:08.057 | INFO     | __main__:run:39 - [code_length:48][map:0.1545]
+2020-06-10 00:09:40.343 | INFO     | __main__:run:39 - [code_length:64][map:0.1654]
+2020-06-10 00:24:35.635 | INFO     | __main__:run:39 - [code_length:96][map:0.1805]
+2020-06-10 00:43:28.329 | INFO     | __main__:run:39 - [code_length:128][map:0.1844]
+
 python run.py --dataset nus-wide-tc21 --root .\data\nus-wide-tc21_alexnet.t
 
 
