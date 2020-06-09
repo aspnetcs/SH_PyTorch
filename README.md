@@ -40,7 +40,7 @@ optional arguments:
 ## Example
 Put these data sets (cifar10-gist.mat,cifar-10_alexnet.t,nus-wide-tc21_alexnet.t,imagenet-tc100_alexnet.t) in the data directory,and then run the following command.
 
-python run.py --dataset cifar-10 --root .\data\cifar-10_alexnet.t
+**python run.py --dataset cifar-10 --root .\data\cifar-10_alexnet.t**
 
 2020-06-02 03:04:53.522 | INFO     | __main__:run:39 - [code_length:8][map:0.1819]
 
