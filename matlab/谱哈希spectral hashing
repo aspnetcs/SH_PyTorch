@@ -1,0 +1,93 @@
+谱哈希对图像特征向量的编码过程可看做是图分割问题，借助于对相似图的拉普拉斯矩阵特征值和特征向量的分析可对图分割问题提供一个松弛解。由谱聚类可知，相似图拉普拉斯矩阵的特征向量实际上就是原始特征降维后的向量，但其并不是0-1的二值向量，可通过对特征向量进行阈值化产生spectral hashing的二值编码(The bits in spectral hashing are calculated by thresholding a subset of eigenvectors of Laplacians of the similar graph).
+
+若原始特征向量空间用高斯核度量相似度 ，则令 为二值化后的特征向量矩阵即经Spectral Hashing后的二值特征向量，则在低维Hamming空间的平均Hamming距离可表示为。此外，What makes good code?
+
+(1) each bit has 50% chance of being 0 or 1;
+
+(2) the bits are independent of each other(always relaxed to uncorrelated).
+
+ 
+
+因此，spectral hashing的编码过程可描述为下述的优化问题(为了求解问题的方便，将二值中的0表示为-1)：
+
+
+
+
+
+                    
+
+                    
+
+ 
+
+用Spectral 理论描述为：
+
+
+
+
+
+                     
+
+                     
+
+若没有二值的约束 ，则上述优化问题就简化为 是拉普拉斯矩阵的个最小特征值所对应的特征向量构成的矩阵，通过简单的Thresholding可获取Binary Code。
+
+ 
+
+但上述的编码过程仅适用于训练集，而我们需要的是能够泛化到任意给定的out-of-example特征向量，因此引入来描述原始特征空间中数据点的概率分布，则上述的优化问题可表述为：
+
+ 
+
+
+                     
+
+                     
+当暂不考虑二值化约束时，上述优化问题的解即是eigenfunctions of weighted Laplace-Beltramician operactor  with  minimal eigenvalue. And with proper normalization, the eigenvectors of the discrete Laplacian defined by  points sampled from  coverges to eigenfunctions of  as  .
+
+ 
+
+因此，就转化为如何利用服从分布的个离散的数据点求取 的特征方程的问题：
+
+当是separable distribution时，即，亦即各维之间相互独立时， 的特征方程具有outer product 形式：
+
+即若 是特征值对应的一维空间 的特征方程，则 是特征值 对应的维空间的特征方程。特别的，针对 区间内均匀可分离的分布，一维空间的特征值和特征向量可通过下式求得：
+
+                                ----------function (1)
+
+，    ----------function (2)
+
+ 
+
+Summarize the spectral hashing alogrithm:
+
+Input:  data points  and the hashed bits 
+
+Finding the  principal components of the data using PCA;
+Calculating the  smallest single-dimension analytical eigenfunctions of   along every PCA direction. This is done by evaluating the  smallest eigenvalues for each direction using function (2), thus creating a list of  eigenvalues, and then sorting this list to find the  smallest eigenvalues; ???
+Thresholding the analytical eigenfunctions at zero, to obtain binary codes.
+分析:
+
+Step1中PCA的主要作用是align the axes for data points, 也就是使数据点各维之间相互独立，符合seperate distribution;
+
+Step2个人理解应该是先求取维数据点每一维 均匀分布区间，然后利用方程(2)求取每一维对应的最小的个特征值，因此总计有个特征值。然后在个特征值中选取最小的个，并记录其所对应的向量维度及其特征值序号，即 对；针对选取的各最小特征值，计算其对应的一维特征方程 。
+
+Step3是采用符号函数，对选取的特征方程进行二值化，产生二值码
+
+           由此可见，对图的次分割，每次都是选取维空间的某一维，并没有利用特征方程的outer-product的特性，paper 中的解释是二值化编码采用的是符号函数，且，因此一个bit的取值可由其它bits确定，失了去独立性。但其前提是建立在每一个bit对应的特征方程是由其它bits对应特征方程的outer-product，若bits之间不包含相同的特征方程，则还会继续保留各bits之间的独立性。因此outer-product的特征方程应该也可以利用。这仅是个人理解，具体效果还有待验证。
+
+训练集的作用主要是产生每维对应的分布区间，利用记录的个最小特征值对应的维度与特征值序号对 扩展至out-of-example。
+
+ 
+
+
+
+ 
+
+ 
+
+参考文献
+
+[1] http://www.cs.huji.ac.il/~yweiss/SpectralHashing/ 包含了paper和matlab源码
+————————————————
+版权声明：本文为CSDN博主「zwwkity」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/zwwkity/java/article/details/8568994
