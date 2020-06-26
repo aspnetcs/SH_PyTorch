@@ -3,6 +3,8 @@ http://papers.nips.cc/paper/3383-spectral-hashing.pdf
 
 http://papers.nips.cc/paper/3383-spectral-hashing
 
+http://www.cs.huji.ac.il/~yweiss/SpectralHashing/
+
 ## Reference
 Weiss Y , Torralba A , Fergus R . Spectral Hashing[C]// Advances in Neural Information Processing Systems 21, Proceedings of the Twenty-Second Annual Conference on Neural Information Processing Systems, Vancouver, British Columbia, Canada, December 8-11, 2008. Curran Associates Inc. 2008.
 
