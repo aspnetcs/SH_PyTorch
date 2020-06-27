@@ -1,3 +1,4 @@
+https://www.cnblogs.com/jiangxinyang/p/9314256.html
 机器学习算法总结(十二)——流形学习（Manifold Learning）
 1、什么是流形
 
