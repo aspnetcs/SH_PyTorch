@@ -1,0 +1,28 @@
+http://people.cs.uchicago.edu/~dinoj/manifold/swissroll.html
+
+Swiss Roll Dataset
+Dinoj Surendran, 16 May 2004
+This data set was created to test out various dimensionality reduction algorithms. The idea was to create several points in 2d, and then map them to 3d with some smooth function, and then to see what the algorithm would find when it mapped the points back to 2d.
+
+The original data was created by randomly sampling from a Gaussian Mixture Model with centers/means at (7.5,7.5), (7.5,12.5), (12.5,7.5) and (12.5,12.5). The covariance for each gaussian was the 2x2 identity matrix. This was created with the makegaussmixnd.m and plotcol.m functions :
+
+  ppm = [400 400 400 400];        % points per mixture
+  centers = [7.5 7.5; 7.5 12.5; 12.5 7.5; 12.5 12.5];
+  stdev = 1;
+  [data2,labels]=makegaussmixnd(centers,stdev,ppm);
+  plotcol (data2, ppm, 'rgbk');
+And then printing the resulting plot with the printt.m function :
+
+  printt ('original_7p5_12p5_400');
+The resulting image files original_7p5_12p5_400.eps and original_7p5_12p5_400.jpg look like this:
+
+
+There are 400 points in each of the four clusters above. The actual data points can be found in the file preswissroll.dat, which has a 1600x2 matrix, and preswissroll_labels.dat, which has a 1600x1 vector of labels (1,2,3 or 4 depending on which mixture model the point was generated from).
+
+The data was then converted from 2 to 3 dimensions with the Swiss Roll mapping (x,y) -> (x cos x, y, x sin x). Matlab code for this:
+
+  X = data2(:,1);
+  Y = data2(:,2);
+  data3 = [X.*cos(X) Y X.*sin(X)];
+  plotcol (data3,ppm,'rgbk');
+This results in the dataset swissroll.dat (a 1600 x 3 matrix) represented in the picture below. It was created with the Partiview files swissroll.cf, swissroll.speck and points3d.cmap.
